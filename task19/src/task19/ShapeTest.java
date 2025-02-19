@@ -11,9 +11,6 @@ abstract class Rectangle implements Shape{
 		this.height = height;
 	}
 }
-
-
-
 public class ShapeTest {
 
 	public static void main(String[] args) {
@@ -21,30 +18,23 @@ public class ShapeTest {
 			
 			@Override
 			public double calculateArea() {
-				
 				return width * height;
 			}
 		};
-		
 		class Circle implements Shape{
 			private double radius;
 			
 			public Circle(double radius) {
 				this.radius=radius;
 			}
-
 			@Override
 			public double calculateArea() {
 				return Math.PI * radius * radius;
 			}
 		}
 		Circle circle  = new Circle(7);
-		
 		System.out.println("Rectangle area : "+ rectangle.calculateArea());
 		
-		System.out.println("circle area : "+ circle.calculateArea());
-
-		
+		System.out.println("circle area : "+ circle.calculateArea());	
 	}
-
 }
